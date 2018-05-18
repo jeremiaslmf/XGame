@@ -1,0 +1,8 @@
+D:\Projetos\XGame\XGame.AppConsole\bin\Debug\XGame.AppConsole.exe.config
+D:\Projetos\XGame\XGame.AppConsole\bin\Debug\XGame.AppConsole.exe
+D:\Projetos\XGame\XGame.AppConsole\bin\Debug\XGame.AppConsole.pdb
+D:\Projetos\XGame\XGame.AppConsole\bin\Debug\XGame.Domain.dll
+D:\Projetos\XGame\XGame.AppConsole\bin\Debug\XGame.Domain.pdb
+D:\Projetos\XGame\XGame.AppConsole\obj\Debug\XGame.AppConsole.csprojResolveAssemblyReference.cache
+D:\Projetos\XGame\XGame.AppConsole\obj\Debug\XGame.AppConsole.exe
+D:\Projetos\XGame\XGame.AppConsole\obj\Debug\XGame.AppConsole.pdb

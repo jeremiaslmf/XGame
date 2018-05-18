@@ -4,6 +4,7 @@
     {
         Ativo,
         Inativo,
-        Bloqueado
+        Bloqueado,
+        Andamento
     }
 }
