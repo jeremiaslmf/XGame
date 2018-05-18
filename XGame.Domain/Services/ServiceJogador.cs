@@ -1,11 +1,16 @@
-﻿using System;
+﻿using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
+using System;
 using XGame.Domain.Arguments.Jogador;
+using XGame.Domain.Entities;
 using XGame.Domain.Interfaces.Repositories;
 using XGame.Domain.Interfaces.Services;
+using XGame.Domain.Resources;
+using XGame.Domain.ValueObjects;
 
 namespace XGame.Domain.Services
 {
-    public class ServiceJogador : IServiceJogador
+    public class ServiceJogador : Notifiable, IServiceJogador
     {
         private readonly IRepositoryJogador _repositoryJogador;
 
@@ -21,6 +26,7 @@ namespace XGame.Domain.Services
 
         public AdicionarJogadorResponse AdicionarJogador(AdicionarJogadorRequest request)
         {
+
             Guid id = _repositoryJogador.AdicionarJogador(request);
             return new AdicionarJogadorResponse()
             {
@@ -31,17 +37,18 @@ namespace XGame.Domain.Services
 
         public AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRquest request)
         {
-            // Isso será melhorado futuramente, pois as Exceptions exigem muito processamento
             if (request == null)
-                throw new Exception("AutenticarJogadorRequest é obrigatório.");
+                AddNotification("AutenticarJogadorRquest", Message.X0_E_OBRIGATORIO.ToFormat("AutenticarJogadorRquest"));
 
-            if (IsEmail(request.Email))
-                throw new Exception("Informe um e-mail.");
+            var email = new Email(request.Email);
+            var jogador = new Jogador(email, request.Senha);
 
-            if (request.Senha.Length < 6)
-                throw new Exception("Digite uma senha de no mínimo 6 caracteres.");
+            AddNotifications(jogador, email);
 
-            var response = _repositoryJogador.AutenticarJogador(request);
+            if (jogador.IsInvalid())
+                return null;
+
+            var response = _repositoryJogador.AutenticarJogador(jogador.Email.Endereco, jogador.Senha);
 
             return response;
         }

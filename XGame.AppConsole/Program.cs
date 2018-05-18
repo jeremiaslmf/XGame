@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using XGame.Domain.Arguments.Jogador;
 using XGame.Domain.Services;
 
@@ -10,13 +11,22 @@ namespace XGame.AppConsole
         {
             Console.WriteLine("Iniciando......");
 
+            Console.WriteLine("Criando instancia do servico......");
             var service = new ServiceJogador();
-            Console.WriteLine("Criei instancia do servico......");
 
+            Console.WriteLine("Criando instancia do objeto request......");
             AutenticarJogadorRquest request = new AutenticarJogadorRquest();
-            Console.WriteLine("Criei instancia do objeto request......");
+            request.Email = "jeremiaslmf@gmail.com";
+            request.Senha = "123456789";
 
             var response = service.AutenticarJogador(request);
+
+            service.Notifications.ToList().ForEach(x => Console.WriteLine(x.Message));
+
+            if (service.IsValid())
+                return;
+
+
 
             Console.ReadKey();
         }

@@ -112,6 +112,11 @@
     <Compile Include="Interfaces\Repositories\IRepositoryJogador.cs" />
     <Compile Include="Interfaces\Services\IServiceJogador.cs" />
     <Compile Include="Interfaces\Services\IServicePlataforma.cs" />
+    <Compile Include="Resources\Message.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Message.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\ServiceJogador.cs" />
     <Compile Include="ValueObjects\Nome.cs" />
     <Compile Include="Entities\Plataforma.cs" />
@@ -125,5 +130,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Message.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Message.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
