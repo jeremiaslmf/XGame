@@ -104,6 +104,7 @@
     <Compile Include="Entities\Jogo.cs" />
     <Compile Include="Entities\JogoPlataforma.cs" />
     <Compile Include="Entities\MeusJogos.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Interfaces\Arguments\IRequest.cs" />
     <Compile Include="Interfaces\Arguments\IResponse.cs" />
     <Compile Include="Arguments\Jogador\AutenticarJogadorRquest.cs" />

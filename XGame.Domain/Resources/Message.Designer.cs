@@ -169,6 +169,24 @@ namespace XGame.Domain.Resources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Objeto {0} é obrigatório..
+        /// </summary>
+        public static string OBJETO_X0_E_OBRIGATORIO {
+            get {
+                return ResourceManager.GetString("OBJETO_X0_E_OBRIGATORIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Operação realizada com sucesso..
+        /// </summary>
+        public static string OPERACAO_REALIZADA_COM_SUCESSO {
+            get {
+                return ResourceManager.GetString("OPERACAO_REALIZADA_COM_SUCESSO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a {0} deve ser maior ou igual a {1}..
         /// </summary>
         public static string X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1 {
@@ -178,11 +196,56 @@ namespace XGame.Domain.Resources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatória..
+        /// </summary>
+        public static string X0_E_OBRIGATORIA {
+            get {
+                return ResourceManager.GetString("X0_E_OBRIGATORIA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatória e deve conter entre {1} e {2} caracteres..
+        /// </summary>
+        public static string X0_E_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES {
+            get {
+                return ResourceManager.GetString("X0_E_OBRIGATORIA_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatória e deve conter {1} caracteres..
+        /// </summary>
+        public static string X0_E_OBRIGATORIA_E_DEVE_CONTER_X1_CARACTERES {
+            get {
+                return ResourceManager.GetString("X0_E_OBRIGATORIA_E_DEVE_CONTER_X1_CARACTERES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatório..
         /// </summary>
         public static string X0_E_OBRIGATORIO {
             get {
                 return ResourceManager.GetString("X0_E_OBRIGATORIO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatório e deve conter entre {1} e {2} caracteres..
+        /// </summary>
+        public static string X0_E_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES {
+            get {
+                return ResourceManager.GetString("X0_E_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} é obrigatório e deve conter {1} caracteres..
+        /// </summary>
+        public static string X0_E_OBRIGATORIO_E_DEVE_CONTER_X1_CARACTERES {
+            get {
+                return ResourceManager.GetString("X0_E_OBRIGATORIO_E_DEVE_CONTER_X1_CARACTERES", resourceCulture);
             }
         }
         
@@ -201,6 +264,24 @@ namespace XGame.Domain.Resources {
         public static string X0_INVALIDO {
             get {
                 return ResourceManager.GetString("X0_INVALIDO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} não informada..
+        /// </summary>
+        public static string X0_NAO_INFORMADA {
+            get {
+                return ResourceManager.GetString("X0_NAO_INFORMADA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a {0} não informado..
+        /// </summary>
+        public static string X0_NAO_INFORMADO {
+            get {
+                return ResourceManager.GetString("X0_NAO_INFORMADO", resourceCulture);
             }
         }
     }
