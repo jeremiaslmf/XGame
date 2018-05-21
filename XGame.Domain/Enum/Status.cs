@@ -2,6 +2,7 @@
 {
     public enum Status
     {
+        Ativo,
         EmAnalise,
         Inativo,
         Bloqueado,

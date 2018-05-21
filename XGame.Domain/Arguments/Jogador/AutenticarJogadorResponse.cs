@@ -1,7 +1,4 @@
-﻿using System;
-using XGame.Domain.Entities;
-using XGame.Domain.Interfaces.Arguments;
-using XGame.Domain.ValueObjects;
+﻿using XGame.Domain.Interfaces.Arguments;
 
 namespace XGame.Domain.Arguments.Jogador
 {
@@ -16,7 +13,7 @@ namespace XGame.Domain.Arguments.Jogador
             {
                 Email = entidade.Email.Endereco,
                 PrimeiroNome = entidade.Nome.PrimeiroNome
-            }
+            };
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using XGame.Domain.Arguments.Jogador;
 using XGame.Domain.Entities;
 using XGame.Domain.Interfaces.Repositories;
@@ -16,7 +18,6 @@ namespace XGame.Domain.Services
 
         public ServiceJogador()
         {
-
         }
 
         public ServiceJogador(IRepositoryJogador repositoryJogador)
@@ -38,6 +39,33 @@ namespace XGame.Domain.Services
             return (AdicionarJogadorResponse)jogador;
         }
 
+        public AlterarJogadorResponse AlterarJogador(AlterarJogadorRequest request)
+        {
+            if (request == null)
+                AddNotification("AlterarJogadorRquest", Message.X0_E_OBRIGATORIO.ToFormat("AlterarJogadorRquest"));
+
+            Jogador jogador = _repositoryJogador.ObterJogadorPorId(request.Id);
+            if (jogador == null)
+            {
+                AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
+                return null;
+            }
+
+            var nome = new Nome(request.Nome.PrimeiroNome, request.Nome.UltimoNome);
+            var email = new Email(request.Email.Endereco);
+
+            jogador.AlterarJogador(nome, email, jogador.Status);
+
+            AddNotifications(jogador, email);
+
+            if (IsInvalid())
+                return null;
+
+            _repositoryJogador.AlterarJogador(jogador);
+
+            return (AlterarJogadorResponse)jogador;
+        }
+
         public AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRquest request)
         {
             if (request == null)
@@ -56,9 +84,9 @@ namespace XGame.Domain.Services
             return (AutenticarJogadorResponse)jogador;
         }
 
-        private bool IsEmail(string email)
+        public IEnumerable<JogadorResponse> ListarJogador()
         {
-            return string.IsNullOrEmpty(email);
+            return _repositoryJogador.ListarJogador().ToList().Select(jogador => (JogadorResponse)jogador).ToList();
         }
     }
 }

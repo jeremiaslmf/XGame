@@ -124,6 +124,15 @@ namespace XGame.Domain.Resources {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não é possível alterar {0}..
+        /// </summary>
+        public static string NAO_E_POSSIVEL_ALTERAR_X0 {
+            get {
+                return ResourceManager.GetString("NAO_E_POSSIVEL_ALTERAR_X0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Não é possível excluir um {0} associado a um {1}..
         /// </summary>
         public static string NAO_E_POSSIVEL_EXCLUIR_UM_X0_ASSOCIADO_A_UM_X1 {

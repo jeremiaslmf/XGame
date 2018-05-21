@@ -60,5 +60,19 @@ namespace XGame.Domain.Entities
 
         #endregion Propriedades
 
+        public override string ToString()
+        {
+            return $"{Nome.PrimeiroNome} {Nome.UltimoNome}";
+        }
+
+        public void AlterarJogador(Nome nome, Email email, Status status)
+        {
+            Nome = nome;
+            Email = email;
+
+            new AddNotifications<Jogador>(this).IfFalse(status == Status.Ativo, Message.NAO_E_POSSIVEL_ALTERAR_X0.ToFormat("Jogador"));
+
+            AddNotifications(nome, email);
+        }
     }
 }
