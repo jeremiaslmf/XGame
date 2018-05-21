@@ -14,3 +14,6 @@ D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.csproj.CoreCompileInputs.cac
 D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.csproj.CopyComplete
 D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.dll
 D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.pdb
+D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.Migrations.CriacaoBanco.resources
+D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.csproj.GenerateResource.cache
+D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.Migrations.MapeamentoPlataforma.resources
