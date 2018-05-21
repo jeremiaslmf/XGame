@@ -107,3 +107,7 @@ D:\Projetos\XGame\XGame.AppConsole\bin\Debug\System.Xml.XmlSerializer.dll
 D:\Projetos\XGame\XGame.AppConsole\bin\Debug\System.Xml.XPath.dll
 D:\Projetos\XGame\XGame.AppConsole\bin\Debug\System.Xml.XPath.XDocument.dll
 D:\Projetos\XGame\XGame.AppConsole\obj\Debug\XGame.AppConsole.exe.config
+D:\Projetos\XGame\XGame.AppConsole\bin\Debug\EntityFramework.dll
+D:\Projetos\XGame\XGame.AppConsole\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\XGame\XGame.AppConsole\bin\Debug\EntityFramework.xml
+D:\Projetos\XGame\XGame.AppConsole\bin\Debug\EntityFramework.SqlServer.xml
