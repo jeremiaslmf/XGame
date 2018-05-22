@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XGame.AppConsole", "XGame.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XGame.Infra", "XGame.Infra\XGame.Infra.csproj", "{B09A6382-360D-4A54-BDEC-7DD253A78C27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XGame.IoC", "XGame.IoC\XGame.IoC.csproj", "{A27179D1-8528-4D60-BBEA-69424D200D73}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B09A6382-360D-4A54-BDEC-7DD253A78C27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B09A6382-360D-4A54-BDEC-7DD253A78C27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B09A6382-360D-4A54-BDEC-7DD253A78C27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A27179D1-8528-4D60-BBEA-69424D200D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A27179D1-8528-4D60-BBEA-69424D200D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A27179D1-8528-4D60-BBEA-69424D200D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A27179D1-8528-4D60-BBEA-69424D200D73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
