@@ -1,6 +1,7 @@
 ﻿using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
 using System;
+using XGame.Domain.Entities.Base;
 using XGame.Domain.Enum;
 using XGame.Domain.Extensions;
 using XGame.Domain.Resources;
@@ -8,7 +9,7 @@ using XGame.Domain.ValueObjects;
 
 namespace XGame.Domain.Entities
 {
-    public class Jogador : Notifiable
+    public class Jogador : EntityBase
     {
 
         #region Métodos Construtores
@@ -17,7 +18,6 @@ namespace XGame.Domain.Entities
         {
             Email = email;
             Senha = senha;
-            Id = Guid.NewGuid();
             Status = Status.EmAnalise;
 
             #region Notificações
@@ -36,7 +36,6 @@ namespace XGame.Domain.Entities
             Nome = nome;
             Email = email;
             Senha = senha;
-            Id = Guid.NewGuid();
             Status = Status.EmAnalise;
 
             new AddNotifications<Jogador>(this)

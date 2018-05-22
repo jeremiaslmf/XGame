@@ -3,6 +3,7 @@ using prmToolkit.NotificationPattern.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using XGame.Domain.Arguments.Base;
 using XGame.Domain.Arguments.Jogador;
 using XGame.Domain.Entities;
 using XGame.Domain.Interfaces.Repositories;
@@ -31,10 +32,10 @@ namespace XGame.Domain.Services
             var email = new Email(request.Email.Endereco);
             var jogador = new Jogador(nome, email, request.Senha);
 
-            if (this.IsInvalid())
+            if (IsInvalid())
                 return null;
 
-            jogador = _repositoryJogador.AdicionarJogador(jogador);
+            jogador = _repositoryJogador.Adicionar(jogador);
 
             return (AdicionarJogadorResponse)jogador;
         }
@@ -44,7 +45,7 @@ namespace XGame.Domain.Services
             if (request == null)
                 AddNotification("AlterarJogadorRquest", Message.X0_E_OBRIGATORIO.ToFormat("AlterarJogadorRquest"));
 
-            Jogador jogador = _repositoryJogador.ObterJogadorPorId(request.Id);
+            Jogador jogador = _repositoryJogador.ObterPorId(request.Id);
             if (jogador == null)
             {
                 AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
@@ -61,7 +62,7 @@ namespace XGame.Domain.Services
             if (IsInvalid())
                 return null;
 
-            _repositoryJogador.AlterarJogador(jogador);
+            _repositoryJogador.Editar(jogador);
 
             return (AlterarJogadorResponse)jogador;
         }
@@ -79,14 +80,28 @@ namespace XGame.Domain.Services
             if (jogador.IsInvalid())
                 return null;
 
-            jogador = _repositoryJogador.AutenticarJogador(jogador.Email.Endereco, jogador.Senha);
+            jogador = _repositoryJogador.ObterPor(x => x.Email.Endereco == jogador.Email.Endereco && x.Senha == jogador.Senha);
 
             return (AutenticarJogadorResponse)jogador;
         }
 
+        public ResponseBase ExcluirJogador(Guid id)
+        {
+            Jogador jogador = _repositoryJogador.ObterPorId(id);
+            if (jogador == null)
+            {
+                AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
+                return null;
+            }
+
+            _repositoryJogador.Remover(jogador);
+
+            return new ResponseBase();
+        }
+
         public IEnumerable<JogadorResponse> ListarJogador()
         {
-            return _repositoryJogador.ListarJogador().ToList().Select(jogador => (JogadorResponse)jogador).ToList();
+            return _repositoryJogador.Listar().Select(jogador => (JogadorResponse)jogador).ToList();
         }
     }
 }
