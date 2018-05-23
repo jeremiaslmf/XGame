@@ -19,10 +19,10 @@ D:\Projetos\XGame\XGame.Domain\bin\Debug\System.Security.Cryptography.Primitives
 D:\Projetos\XGame\XGame.Domain\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 D:\Projetos\XGame\XGame.Domain\bin\Debug\System.Xml.ReaderWriter.dll
 D:\Projetos\XGame\XGame.Domain\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Projetos\XGame\XGame.Domain\obj\Debug\XGame.Domain.csprojResolveAssemblyReference.cache
 D:\Projetos\XGame\XGame.Domain\obj\Debug\XGame.Domain.Resources.Message.resources
 D:\Projetos\XGame\XGame.Domain\obj\Debug\XGame.Domain.csproj.GenerateResource.cache
 D:\Projetos\XGame\XGame.Domain\obj\Debug\XGame.Domain.csproj.CoreCompileInputs.cache
 D:\Projetos\XGame\XGame.Domain\obj\Debug\XGame.Domain.csproj.CopyComplete
 D:\Projetos\XGame\XGame.Domain\obj\Debug\XGame.Domain.dll
 D:\Projetos\XGame\XGame.Domain\obj\Debug\XGame.Domain.pdb
-D:\Projetos\XGame\XGame.Domain\obj\Debug\XGame.Domain.csprojResolveAssemblyReference.cache

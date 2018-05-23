@@ -6,7 +6,12 @@ namespace XGame.Domain.ValueObjects
 {
     public class Email : Notifiable
     {
-        #region Método Construtor
+        #region Métodos Construtores
+
+        protected Email()
+        {
+
+        }
 
         public Email(string endereco)
         {
