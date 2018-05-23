@@ -3,11 +3,13 @@ D:\Projetos\XGame\XGame.Infra\bin\Debug\XGame.Infra.dll
 D:\Projetos\XGame\XGame.Infra\bin\Debug\XGame.Infra.pdb
 D:\Projetos\XGame\XGame.Infra\bin\Debug\EntityFramework.dll
 D:\Projetos\XGame\XGame.Infra\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\XGame\XGame.Infra\bin\Debug\System.Web.Providers.dll
 D:\Projetos\XGame\XGame.Infra\bin\Debug\XGame.Domain.dll
 D:\Projetos\XGame\XGame.Infra\bin\Debug\XGame.Domain.pdb
 D:\Projetos\XGame\XGame.Infra\bin\Debug\XGame.Domain.dll.config
 D:\Projetos\XGame\XGame.Infra\bin\Debug\EntityFramework.xml
 D:\Projetos\XGame\XGame.Infra\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos\XGame\XGame.Infra\bin\Debug\System.Web.Providers.xml
 D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.csprojResolveAssemblyReference.cache
 D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.Migrations.CriacaoBanco.resources
 D:\Projetos\XGame\XGame.Infra\obj\Debug\XGame.Infra.Migrations.MapeamentoPlataforma.resources

@@ -51,7 +51,6 @@ namespace XGame.Domain.Entities
 
         #region Propriedades
 
-        public Guid Id { get; private set; }
         public Nome Nome { get; private set; }
         public Email Email { get; private set; }
         public string Senha { get; private set; }

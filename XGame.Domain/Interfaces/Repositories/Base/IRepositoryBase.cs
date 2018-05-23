@@ -6,12 +6,12 @@ using System.Linq.Expressions;
 namespace XGame.Domain.Interfaces.Repositories.Base
 {
     public interface IRepositoryBase<TEntidade, TId>
-        where TEntidade : class
-        where TId : struct
+       where TEntidade : class
+       where TId : struct
     {
         IQueryable<TEntidade> ListarPor(Expression<Func<TEntidade, bool>> where, params Expression<Func<TEntidade, object>>[] includeProperties);
 
-        IQueryable<TEntidade> ListarEOrdenarPor<TKey>(Expression<Func<TEntidade, bool>> where, Expression<Func<TEntidade, TKey>> ordem, bool ascendente = true, params Expression<Func<TEntidade, object>>[] includeProperties);
+        IQueryable<TEntidade> ListarEOrdenadosPor<TKey>(Expression<Func<TEntidade, bool>> where, Expression<Func<TEntidade, TKey>> ordem, bool ascendente = true, params Expression<Func<TEntidade, object>>[] includeProperties);
 
         TEntidade ObterPor(Func<TEntidade, bool> where, params Expression<Func<TEntidade, object>>[] includeProperties);
 
@@ -19,7 +19,7 @@ namespace XGame.Domain.Interfaces.Repositories.Base
 
         IQueryable<TEntidade> Listar(params Expression<Func<TEntidade, object>>[] includeProperties);
 
-        //IQueryable<TEntidade> ListarOrdenadosPor<TKey>(Expression<Func<TEntidade, TKey>> ordem, bool ascendente = true, params Expression<Func<TEntidade, TKey>>ordem, includeProperties );
+        IQueryable<TEntidade> ListarOrdenadosPor<TKey>(Expression<Func<TEntidade, TKey>> ordem, bool ascendente = true, params Expression<Func<TEntidade, object>>[] includeProperties);
 
         TEntidade ObterPorId(TId id, params Expression<Func<TEntidade, object>>[] includeProperties);
 
@@ -30,6 +30,5 @@ namespace XGame.Domain.Interfaces.Repositories.Base
         void Remover(TEntidade entidade);
 
         IEnumerable<TEntidade> AdicionarLista(IEnumerable<TEntidade> entidades);
-        
     }
 }
