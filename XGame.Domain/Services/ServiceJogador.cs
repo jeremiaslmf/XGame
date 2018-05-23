@@ -32,6 +32,8 @@ namespace XGame.Domain.Services
             var email = new Email(request.Email.Endereco);
             var jogador = new Jogador(nome, email, request.Senha);
 
+            AddNotifications(jogador);
+
             if (IsInvalid())
                 return null;
 
@@ -67,7 +69,7 @@ namespace XGame.Domain.Services
             return (AlterarJogadorResponse)jogador;
         }
 
-        public AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRquest request)
+        public AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request)
         {
             if (request == null)
                 AddNotification("AutenticarJogadorRquest", Message.X0_E_OBRIGATORIO.ToFormat("AutenticarJogadorRquest"));

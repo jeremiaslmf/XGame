@@ -1,5 +1,4 @@
-﻿using Microsoft.Practices.Unity;
-using prmToolkit.NotificationPattern;
+﻿using prmToolkit.NotificationPattern;
 using System.Data.Entity;
 using Unity;
 using Unity.Lifetime;
@@ -36,8 +35,6 @@ namespace XGame.IoC.Unity
 
             container.RegisterType<IRepositoryJogador, RepositoryJogador>(new HierarchicalLifetimeManager());
             //container.RegisterType<IRepositoryJogo, RepositoryJogo>(new HierarchicalLifetimeManager());
-
-
 
         }
     }
