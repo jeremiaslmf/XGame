@@ -32,10 +32,10 @@ namespace XGame.Domain.Services
             var email = new Email(request.Email.Endereco);
             var jogador = new Jogador(nome, email, request.Senha);
 
-            if (_repositoryJogador.Existe(x => x.Email.Endereco == request.Email.Endereco))
-                AddNotification("E-mail", Message.JA_EXISTE_UM_X0_CHAMADO_X1.ToFormat("e-mail", request.Email.Endereco));
-
             AddNotifications(jogador);
+
+            //if (_repositoryJogador.Existe(x => x.Email.Endereco == request.Email.Endereco))
+            //    AddNotification("E-mail", Message.JA_EXISTE_UM_X0_CHAMADO_X1.ToFormat("e-mail", request.Email.Endereco));
 
             if (IsInvalid())
                 return null;
