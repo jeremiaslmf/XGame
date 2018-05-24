@@ -24,7 +24,7 @@ namespace XGame.Api.Controller.Base
         {
             _serviceBase = serviceBase;
 
-            if (!serviceBase.Notifications.Any())
+            if (!_serviceBase.Notifications.Any())
             {
                 try
                 {
